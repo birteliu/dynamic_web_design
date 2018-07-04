@@ -1,0 +1,118 @@
+html {
+  border-top: 20px solid #d35046;
+  border-bottom: 20px solid #d35046;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  background-color: #e96a60;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.back-text {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 8em;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: rgba(0, 0, 0, 0.07);
+  bottom: 10%;
+  overflow: hidden;
+}
+
+.namecard {
+  width: 450px;
+  height: 300px;
+  background-color: #edf0f4;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-70%);
+  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .namecard {
+    width: 90%;
+    height: 50%;
+    top: 50%;
+    transform: translateY(-70%);
+  }
+}
+
+.cycle {
+  position: absolute;
+  background-color: #fec1ab;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  bottom: -100px;
+  left: -100px;
+}
+.triangle {
+  width: 200px;
+  height: 200px;
+  background-color: #fec1ab;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  position: absolute;
+  top: -120px;
+  right: 10px;
+}
+
+.brand {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+.brand img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+.brand h2 {
+  display: inline-block;
+  color: #e96a60;
+  padding-left: 10px;
+  letter-spacing: 1px;
+}
+
+.info {
+  text-align: right;
+  position: absolute;
+  right: 35px;
+  bottom: 20px;
+}
+
+.info h4 {
+  color: #4c5764;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+
+.info h5 {
+  color: #e96a60;
+  margin: 0;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+}
+
+.info p {
+  color: #4c5764;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
