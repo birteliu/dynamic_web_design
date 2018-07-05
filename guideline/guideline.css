@@ -1,0 +1,163 @@
+.bg-main {
+  background-color: #e96a60;
+  color: #edf0f4;
+}
+
+.bg-second {
+  background-color: #c7d8e9;
+  color: #4c5764;
+}
+
+.bg-dark {
+  background-color: #4c5764;
+  color: #edf0f4;
+}
+
+.bg-light {
+  background-color: #edf0f4;
+  color: #4c5764;
+}
+
+* {
+  position: relative;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  background-color: #4c5764;
+}
+
+header img {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.content {
+  padding: 50px;
+}
+
+.content .wrap {
+  width: 768px;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .content .wrap {
+    width: 100%;
+  }
+}
+
+.content .wrap h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.content .wrap h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.content .wrap h1.english {
+  font-size: 36px;
+  margin-top: 5px;
+}
+
+.content .wrap h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.content .wrap h2.english {
+  font-size: 26px;
+  margin-top: 5px;
+}
+
+.content .wrap h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.content .wrap h3.english {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.content .wrap hr {
+  margin: 20px 0;
+}
+
+.content .wrap .colorchip {
+  padding: 25px 30px 25px 0;
+  display: inline-block;
+}
+
+.content .wrap .colorchip .color-square {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.content .wrap .colorchip .color {
+  display: inline-block;
+}
+
+.content .wrap button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  font-size: 15px;
+  margin-right: 25px;
+}
+
+.bg-light .english {
+  color: #4c5764;
+}
+
+.bg-light hr {
+  border-color: #4c5764;
+}
+
+.bg-light .color-square,
+.bg-light button {
+  border: solid 2px #4c5764;
+}
+
+.bg-dark .english {
+  color: #c7d8e9;
+}
+
+.bg-dark hr {
+  border-color: #edf0f4;
+}
+
+.bg-dark .color-square,
+.bg-dark button {
+  border: solid 2px #edf0f4;
+}
+
+.bg-second .english {
+  color: #e96a60;
+}
+
+.bg-second hr {
+  border-color: #4c5764;
+}
+
+.bg-second .color-square,
+.bg-second button {
+  border: solid 2px #4c5764;
+}
+/*# sourceMappingURL=guideline.css.map */
