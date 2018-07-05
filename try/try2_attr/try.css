@@ -1,0 +1,47 @@
+* {
+  background-color: #343434;
+  color: #fff;
+}
+
+div {
+  border: solid 2px #fff;
+  margin: 20px;
+  padding: 20px;
+}
+
+div::before {
+  content: attr(data-size) " : ";
+  font-weight: bold;
+}
+
+div::after {
+  content: " " attr(data-color);
+}
+
+[data-size="small"] {
+  width: 100px;
+  height: 50px;
+}
+
+[data-size="medium"] {
+  width: 200px;
+  height: 100px;
+}
+
+[data-size="large"] {
+  width: 400px;
+  height: 200px;
+}
+
+[data-color="red"] {
+  border-color: #ef476f;
+}
+
+[data-color="blue"] {
+  border-color: #118ab2;
+}
+
+[data-color="green"] {
+  border-color: #06d6a0;
+}
+/*# sourceMappingURL=try.css.map */

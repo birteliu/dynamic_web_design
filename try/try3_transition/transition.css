@@ -1,0 +1,122 @@
+* {
+  position: relative;
+}
+
+body,
+html {
+  background-color: #073b4c;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 40%;
+  height: 50%;
+  border: solid 2px #fff;
+  margin: auto;
+  padding: 30px;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  overflow: scroll;
+}
+
+.content:hover h2,
+.content:hover p {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  top: 0;
+}
+
+.content:hover p {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.content h2 {
+  letter-spacing: 2px;
+  font-size: 2.5em;
+  margin: 10px 0;
+  opacity: 0;
+  top: 10px;
+}
+
+.content p {
+  line-height: 2;
+  font-size: 1.2em;
+  opacity: 0;
+  top: 10px;
+  margin-top: 30px;
+}
+
+.content .click-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border: solid 2px #fff;
+  background-color: #073b4c;
+}
+
+.content .click-box:hover {
+  cursor: pointer;
+  background-color: #03171d;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.content .click-box:hover .line1 {
+  -webkit-transform: translateX(-50%) translateY(0) rotate(45deg);
+          transform: translateX(-50%) translateY(0) rotate(45deg);
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.content .click-box:hover .line2 {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.content .click-box:hover .line3 {
+  -webkit-transform: translateX(-50%) translate(0) rotate(-45deg);
+          transform: translateX(-50%) translate(0) rotate(-45deg);
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.content .click-box .line1,
+.content .click-box .line2,
+.content .click-box .line3 {
+  background-color: #fff;
+  width: 50px;
+  height: 5px;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.content .click-box .line1 {
+  -webkit-transform: translateX(-50%) translateY(-300%);
+          transform: translateX(-50%) translateY(-300%);
+}
+
+.content .click-box .line2 {
+  -webkit-transform: translateX(-50%) translateY(0);
+          transform: translateX(-50%) translateY(0);
+}
+
+.content .click-box .line3 {
+  -webkit-transform: translateX(-50%) translateY(300%);
+          transform: translateX(-50%) translateY(300%);
+}
+/*# sourceMappingURL=transition.css.map */
