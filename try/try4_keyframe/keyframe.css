@@ -6,6 +6,8 @@ body,
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
@@ -18,6 +20,13 @@ html {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .content .box {
@@ -35,6 +44,28 @@ html {
   height: 100px;
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .content .box .box1,
+  .content .box .box2,
+  .content .box .box3,
+  .content .box .box4,
+  .content .box .box5 {
+    width: 50px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content .box .box1,
+  .content .box .box2,
+  .content .box .box3,
+  .content .box .box4,
+  .content .box .box5 {
+    width: 30px;
+    height: 100px;
+  }
 }
 
 .content .box .box1 {
@@ -280,14 +311,14 @@ html {
 
 @-webkit-keyframes animation5 {
   0% {
-    -webkit-transform: skew(20deg);
-            transform: skew(20deg);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
   50% {
-    -webkit-transform: skew(-20deg);
-            transform: skew(-20deg);
+    -webkit-transform: skew(-15deg);
+            transform: skew(-15deg);
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
@@ -301,14 +332,14 @@ html {
 
 @keyframes animation5 {
   0% {
-    -webkit-transform: skew(20deg);
-            transform: skew(20deg);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
   50% {
-    -webkit-transform: skew(-20deg);
-            transform: skew(-20deg);
+    -webkit-transform: skew(-15deg);
+            transform: skew(-15deg);
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
