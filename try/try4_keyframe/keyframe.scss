@@ -60,6 +60,7 @@ html {
     .box1 {
       left: 15%;
       animation: animation1 1s infinite;
+      animation-timing-function: ease-in;
     }
     .box2 {
       left: 30%;
@@ -68,6 +69,7 @@ html {
     .box3 {
       left: 45%;
       animation: animation3 1s infinite;
+      animation-timing-function: steps(2);
     }
     .box4 {
       left: 60%;
