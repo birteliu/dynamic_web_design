@@ -42,12 +42,30 @@ html {
     &#pic5 {
       stroke: #000;
       stroke-width: 2px;
+      &:hover {
+        rect {
+          transform: scale(1);
+          transition-duration: 0.5s;
+        }
+        circle,
+        line {
+          opacity: 1;
+          transition-duration: 0.5s;
+          transition-delay: 0.5s;
+        }
+      }
       & rect {
         fill: transparent;
+        transform: scale(0);
+        transform-origin: center center;
       }
       & circle {
         fill: #2684ff;
         stroke: none;
+        opacity: 0;
+      }
+      & line {
+        opacity: 0;
       }
       & text {
         stroke: none;

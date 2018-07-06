@@ -57,13 +57,38 @@ html {
   stroke-width: 2px;
 }
 
+.content svg#pic5:hover rect {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.content svg#pic5:hover circle,
+.content svg#pic5:hover line {
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
 .content svg#pic5 rect {
   fill: transparent;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .content svg#pic5 circle {
   fill: #2684ff;
   stroke: none;
+  opacity: 0;
+}
+
+.content svg#pic5 line {
+  opacity: 0;
 }
 
 .content svg#pic5 text {
