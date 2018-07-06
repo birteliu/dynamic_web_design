@@ -1,0 +1,73 @@
+* {
+  position: relative;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  width: 80%;
+  height: 80%;
+  margin: 10% auto;
+}
+
+.content svg {
+  width: 150px;
+  height: 150px;
+  border: solid 2px #000;
+}
+
+.content svg#pic1 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.content svg#pic1 circle {
+  fill: #fff;
+}
+
+.content svg#pic2 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.content svg#pic2 circle {
+  fill: #fff;
+}
+
+.content svg#pic2 rect {
+  fill: transparent;
+}
+
+.content svg#pic3 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.content svg#pic3 polyline {
+  fill: transparent;
+}
+
+.content svg#pic5 {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.content svg#pic5 rect {
+  fill: transparent;
+}
+
+.content svg#pic5 circle {
+  fill: #2684ff;
+  stroke: none;
+}
+
+.content svg#pic5 text {
+  stroke: none;
+  font-size: 10px;
+}
+/*# sourceMappingURL=svg.css.map */
