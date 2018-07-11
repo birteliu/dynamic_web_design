@@ -24,6 +24,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e37875;
 }
 
 .container {
@@ -33,9 +34,14 @@ html {
   background: linear-gradient(-20deg, #1d072f, #333564);
   border-radius: 10px;
   transition-duration: 1s;
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   @include pad {
     width: 80%;
+  }
+  @include phone {
+    padding: 20px 5px;
+    width: 85%;
   }
   .moon {
     width: 50px;
@@ -47,6 +53,10 @@ html {
     box-shadow: -50px 50px 0 0 #fef93d;
     animation: moonmove 30s infinite;
     transition-duration: 0.5s;
+    @include phone {
+      top: 2px;
+      right: 2px;
+    }
   }
   @keyframes moonmove {
     0% {
@@ -66,6 +76,9 @@ html {
     text-align: center;
     padding: 20px;
     color: #fff;
+    @include phone {
+      padding: 20px 0;
+    }
     h5 {
       margin: 0;
       font-size: 0.9em;
@@ -147,17 +160,26 @@ html {
   hr {
     margin: 20px;
     border: solid 2px #7c737e;
+    @include phone {
+      margin: 20px 0;
+    }
   }
   .bottom-area {
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+    @include phone {
+      padding: 0;
+    }
     .chart {
       width: 100%;
       height: 70px;
       opacity: 0.7;
       padding-bottom: 20px;
+      @include phone {
+        height: 50px;
+      }
       circle {
         fill: #fff;
       }

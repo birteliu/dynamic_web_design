@@ -16,6 +16,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #e37875;
 }
 
 .container {
@@ -25,12 +26,21 @@ html {
   border-radius: 10px;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
   .container {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .container {
+    padding: 20px 5px;
+    width: 85%;
   }
 }
 
@@ -47,6 +57,13 @@ html {
           animation: moonmove 30s infinite;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 415px) {
+  .container .moon {
+    top: 2px;
+    right: 2px;
+  }
 }
 
 @-webkit-keyframes moonmove {
@@ -95,6 +112,12 @@ html {
   text-align: center;
   padding: 20px;
   color: #fff;
+}
+
+@media screen and (max-width: 415px) {
+  .container .text-box {
+    padding: 20px 0;
+  }
 }
 
 .container .text-box h5 {
@@ -230,6 +253,12 @@ html {
   border: solid 2px #7c737e;
 }
 
+@media screen and (max-width: 415px) {
+  .container hr {
+    margin: 20px 0;
+  }
+}
+
 .container .bottom-area {
   padding: 0 20px;
   width: 100%;
@@ -238,11 +267,23 @@ html {
   text-align: center;
 }
 
+@media screen and (max-width: 415px) {
+  .container .bottom-area {
+    padding: 0;
+  }
+}
+
 .container .bottom-area .chart {
   width: 100%;
   height: 70px;
   opacity: 0.7;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 415px) {
+  .container .bottom-area .chart {
+    height: 50px;
+  }
 }
 
 .container .bottom-area .chart circle {
