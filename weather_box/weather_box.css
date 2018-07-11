@@ -1,0 +1,370 @@
+* {
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 40%;
+  padding: 20px;
+  background: linear-gradient(-20deg, #1d072f, #333564);
+  border-radius: 10px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
+
+.container .moon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  top: 25px;
+  right: 25px;
+  -webkit-box-shadow: -50px 50px 0 0 #fef93d;
+          box-shadow: -50px 50px 0 0 #fef93d;
+  -webkit-animation: moonmove 30s infinite;
+          animation: moonmove 30s infinite;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+@-webkit-keyframes moonmove {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    -webkit-box-shadow: -20px 20px 0 0 #fef93d;
+            box-shadow: -20px 20px 0 0 #fef93d;
+  }
+  50% {
+    -webkit-transform: translateX(-10px) translateY(10px);
+            transform: translateX(-10px) translateY(10px);
+    -webkit-box-shadow: -10px 10px 0 0 #fef93d;
+            box-shadow: -10px 10px 0 0 #fef93d;
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    -webkit-box-shadow: -20px 20px 0 0 #fef93d;
+            box-shadow: -20px 20px 0 0 #fef93d;
+  }
+}
+
+@keyframes moonmove {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    -webkit-box-shadow: -20px 20px 0 0 #fef93d;
+            box-shadow: -20px 20px 0 0 #fef93d;
+  }
+  50% {
+    -webkit-transform: translateX(-10px) translateY(10px);
+            transform: translateX(-10px) translateY(10px);
+    -webkit-box-shadow: -10px 10px 0 0 #fef93d;
+            box-shadow: -10px 10px 0 0 #fef93d;
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    -webkit-box-shadow: -20px 20px 0 0 #fef93d;
+            box-shadow: -20px 20px 0 0 #fef93d;
+  }
+}
+
+.container .text-box {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.container .text-box h5 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.container .text-box h3 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.container .cloud {
+  width: 105px;
+  height: 35px;
+  margin: 30px auto 50px auto;
+  border-radius: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 13px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 13px rgba(0, 0, 0, 0.2);
+  -webkit-animation: float 3s infinite;
+          animation: float 3s infinite;
+}
+
+.container .cloud:before, .container .cloud:after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -27px;
+  left: 14px;
+}
+
+.container .cloud:after {
+  top: -18px;
+  left: 42px;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.container .cloud .rain {
+  width: 3px;
+  height: 15px;
+  background-color: #fff;
+  left: 23px;
+  top: 20px;
+  -webkit-animation: raindrop 1s infinite linear;
+          animation: raindrop 1s infinite linear;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.container .cloud .rain2 {
+  left: 48px;
+  top: 10px;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.container .cloud .rain3 {
+  left: 73px;
+  top: -5px;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+@-webkit-keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.container hr {
+  margin: 20px;
+  border: solid 2px #7c737e;
+}
+
+.container .bottom-area {
+  padding: 0 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.container .bottom-area .chart {
+  width: 100%;
+  height: 70px;
+  opacity: 0.7;
+  padding-bottom: 20px;
+}
+
+.container .bottom-area .chart circle {
+  fill: #fff;
+}
+
+.container .bottom-area .chart text {
+  font-size: 2px;
+  fill: #fff;
+}
+
+.container .bottom-area .chart polyline {
+  stroke: white;
+  stroke-width: 0.2px;
+  fill: none;
+}
+
+.container .bottom-area .week .day {
+  display: inline-block;
+  color: #fff;
+  width: calc(100% / 7 - 5px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .bottom-area .week .day h5 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.container .bottom-area .week .day circle {
+  fill: #fef93d;
+}
+
+.container .bottom-area .week .day circle.sun {
+  stroke-width: 20px;
+  stroke: rgba(254, 249, 61, 0.5);
+  stroke-dasharray: 7px;
+  -webkit-animation: shine 2s infinite;
+          animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    stroke: rgba(254, 249, 61, 0.5);
+  }
+  50% {
+    stroke: rgba(254, 249, 61, 0.7);
+  }
+  100% {
+    stroke: rgba(254, 249, 61, 0.5);
+  }
+}
+
+@keyframes shine {
+  0% {
+    stroke: rgba(254, 249, 61, 0.5);
+  }
+  50% {
+    stroke: rgba(254, 249, 61, 0.7);
+  }
+  100% {
+    stroke: rgba(254, 249, 61, 0.5);
+  }
+}
+
+.container .bottom-area .week .day circle.cloud {
+  fill: #bababa;
+}
+
+.container .bottom-area .week .day line {
+  stroke: #4dacff;
+  stroke-width: 3px;
+  -webkit-animation: raindrop2 1.5s infinite linear;
+          animation: raindrop2 1.5s infinite linear;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.container .bottom-area .week .day line.rains2 {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.container .bottom-area .week .day line.rains3 {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+@-webkit-keyframes raindrop2 {
+  0% {
+    opacity: 0.9;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%) translateY(20%);
+            transform: translateX(-10%) translateY(20%);
+  }
+  100% {
+    opacity: 0.6;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes raindrop2 {
+  0% {
+    opacity: 0.9;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%) translateY(20%);
+            transform: translateX(-10%) translateY(20%);
+  }
+  100% {
+    opacity: 0.6;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+}
+/*# sourceMappingURL=weather_box.css.map */

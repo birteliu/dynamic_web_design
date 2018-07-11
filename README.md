@@ -13,3 +13,5 @@ Learning 2: [attr](https://birteliu.github.io/dynamic_web_design/try/try2_attr/)
 Learning 3: [transition](https://birteliu.github.io/dynamic_web_design/try/try3_transition/)
 
 Learning 4: [keyframe](https://birteliu.github.io/dynamic_web_design/try/try4_keyframe/)
+
+Learning 5: [svg](https://birteliu.github.io/dynamic_web_design/try/try5_svg/)
