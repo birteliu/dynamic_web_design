@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="jquery.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+  <div class="section">
+    <h2>jquery 動態改變 css 外觀與 html 內容</h2>
+
+    <h4>1. 更新元素內部 html &rArr; $(選擇條件).html(...)</h4>
+    <div class="block block1"></div>
+
+    <h4>2. 更新 css</h4>
+    <div class="block block2"></div>
+
+    <h4>3. 新增 / 移除 css class &rArr; $(選擇條件).addclass/removeclass(....)</h4>
+    <div class="block block3-1"></div>
+    <div class="block block3-2 box"></div>
+
+    <h4>4. 使用 html() 動態新增元素</h4>
+    <div class="box block4"></div>
+
+    <h4>5. 使用 text() 顯示純文字</h4>
+    <div class="box block5"></div>
+
+  </div>
+
+  <div class="section">
+    <h2>jquery 初階滑鼠事件 click/hover</h2>
+
+    <h4>1. 點擊觸發，與記錄狀態 (click))</h4>
+    <div class="btn">購買物品</div>
+
+    <h4>2. $(this) 操作觸發動作的案件</h4>
+    <div class="btn2" data-cata="one">按鈕一</div>
+    <div class="btn2" data-cata="two">按鈕二</div>
+    <div class="btn2" data-cata="three">按鈕三</div>
+    <h5 class="choose_btn">顯示選擇按鈕</h5>
+    <h5 class="btn_detail">顯示按鈕種類</h5>
+
+    <h4>3. 滑鼠移入移出 ( mouseenter/mouseleave )</h4>
+    <div class="btn3 hover_btn">滑入按鈕看看吧</div>
+
+    <h4>4. 時間相關觸發</h4>
+    <h5>setTimeout(動作, 時間) &rArr; 經過特定時間後執行</h5>
+    <h5>setInterval(動作, 時間) &rArr; 每經過特定時間後執行</h5>
+    <div class="btn time_btn">五秒後會移動還會變色</div>
+    <div class="btn count_btn">經過ㄌ幾秒</div>
+  </div>
+</body>
+
+</html>
