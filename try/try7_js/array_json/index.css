@@ -1,0 +1,47 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 40%;
+  margin: auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+@media (max-width: 800px) {
+  .content {
+    width: 90%;
+  }
+}
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+h4 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  border-left: 2px solid #e37875;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+ul#store li,
+ul#store2 li {
+  border-left: none;
+  padding-left: 0;
+}
+ul#store2 li ul li {
+  border-left: 2px solid #e37875;
+  padding-left: 10px;
+  margin: 10px 0 10px 20px;
+}
