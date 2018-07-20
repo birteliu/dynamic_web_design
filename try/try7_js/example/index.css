@@ -22,6 +22,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #c4d0dc;
+  overflow: scroll;
 }
 
 .phonename {
