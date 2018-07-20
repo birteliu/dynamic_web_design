@@ -21,3 +21,7 @@ Project 3: [Weatherbox](https://birteliu.github.io/dynamic_web_design/weather_bo
 Learning 6: [jquery](https://birteliu.github.io/dynamic_web_design/try/try6_jquery/)
 
 Learning 6-1: [jquery-example](https://birteliu.github.io/dynamic_web_design/try/try6_jquery/example/index.html)
+
+Learning 7: [js](https://birteliu.github.io/dynamic_web_design/try/try7_js/array_json/)
+
+Learning 7-1: [js-example](https://birteliu.github.io/dynamic_web_design/try/try7_js/example/)
