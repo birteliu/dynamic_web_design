@@ -1,0 +1,56 @@
+* {
+  position: relative;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #35366a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.minus,
+.number,
+.add {
+  display: inline-block;
+  font-size: 3em;
+  cursor: pointer;
+  padding: 0 5px;
+  transition-duration: 1s;
+}
+.minus,
+.add {
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+.minus:hover,
+.add:hover {
+  color: #22d389;
+}
+.info {
+  padding: 10px 10px 20px 10px;
+  border-bottom: 5px solid #fff;
+}
+.call {
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+.call_open {
+  height: auto;
+  padding: 20px 10px 5px 10px;
+  transition-duration: 1s;
+}

@@ -19,3 +19,4 @@ Learning 5: [svg](https://birteliu.github.io/dynamic_web_design/try/try5_svg/)
 Project 3: [Weatherbox](https://birteliu.github.io/dynamic_web_design/weather_box)
 
 Learning 6: [jquery](https://birteliu.github.io/dynamic_web_design/try/try6_jquery/)
+Learning 6-1:[jquery-example](https://birteliu.github.io/dynamic_web_design/try/try6_jquery/example.html)
