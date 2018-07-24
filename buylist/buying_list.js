@@ -1,3 +1,6 @@
+var itemurl =
+  "http://www.monoame.com/awi_class/api/command.php?type=get&name=itemdata";
+
 //新增清單物件
 var shoplist = {};
 shoplist.name = "My Buying List 花錢清單";
@@ -9,9 +12,18 @@ shoplist.list = [
   { name: "水壺", price: 500 }
 ];
 
+$.ajax({
+  url: itemurl,
+  success: function(respond) {
+    shoplist.list = JSON.parse(respond);
+    showlist();
+    //console.log(respond);
+  }
+});
+
 //定義元素用的 html 模板，
 var item_html =
-  "<li id='{{id}}' class='li_item'>{{num}}.{{item}}<div class='price'>{{price}}</div><div class='delete' id={{del_id}} data-delid={{del_item_id}}>X</div></li>";
+  "<li id='{{id}}' class='li_item'>{{num}}. {{item}}<div class='price'>{{price}}</div><div class='delete' id={{del_id}} data-delid={{del_item_id}}>X</div></li>";
 var total_html =
   "<li class='total'>總花費額<div class='price'>{{price}}</div></li>";
 

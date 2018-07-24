@@ -22,6 +22,12 @@ Learning 6: [jquery](https://birteliu.github.io/dynamic_web_design/try/try6_jque
 
 Learning 6-1: [jquery-example](https://birteliu.github.io/dynamic_web_design/try/try6_jquery/example/index.html)
 
-Learning 7: [js](https://birteliu.github.io/dynamic_web_design/try/try7_js/array_json/)
+Learning 7: [js-array_json](https://birteliu.github.io/dynamic_web_design/try/try7_js/array_json/)
 
 Learning 7-1: [js-example](https://birteliu.github.io/dynamic_web_design/try/try7_js/example/)
+
+Learning 7-2: [js-ajax](https://birteliu.github.io/dynamic_web_design/try/try7_js/ajax/)
+
+Learning 7-3: [js-ajax_json](https://birteliu.github.io/dynamic_web_design/try/try7_js/ajax_json/)
+
+Project 4: [Buylist](https://birteliu.github.io/dynamic_web_design/buylist/)

@@ -55,6 +55,10 @@ body {
 }
 
 #buying_list .input_box label {
+  min-width: 50px;
+}
+
+#buying_list .input_box label:first-child {
   margin-left: 20px;
 }
 

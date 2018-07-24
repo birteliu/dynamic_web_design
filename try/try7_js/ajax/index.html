@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="notify"></div>
+    <script>
+        var tododata;
+        $.ajax({
+            url: "https://awiclass.monoame.com/api/command.php?type=get&name=notifydata", success: function (respond) {  //respond 回答
+                $("#notify").text(respond);
+                tododata = respond;
+            }
+        });
+    </script>
+</body>
+
+</html>
