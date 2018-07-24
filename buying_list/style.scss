@@ -1,0 +1,126 @@
+$y: #fedd46;
+$p: #fd8ebd;
+$b: #106dce;
+$d: #2c3443;
+
+$pad-w: 767px;
+$phone-w: 575px;
+@mixin pad {
+  @media screen and (max-width: $pad-w) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $phone-w) {
+    @content;
+  }
+}
+
+* {
+  //border: 1px solid #000;
+  position: relative;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#buying_list {
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: $d;
+  color: #fff;
+  @include pad {
+    width: 80%;
+  }
+  @include phone {
+    width: 90%;
+    height: 90%;
+  }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  .input_box {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #fff;
+    color: $d;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    label {
+      margin-left: 20px;
+    }
+    input {
+      padding: 5px;
+      width: 25%;
+      margin-right: 15px;
+      outline: none;
+      border: 1px solid $d;
+    }
+    span {
+      padding: 5px 0;
+      background-color: $b;
+      color: #fff;
+      line-height: 20px;
+      width: 15%;
+      text-align: center;
+      margin-right: 20px;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      &:hover {
+        background-color: darken($b, 10%);
+      }
+    }
+  }
+  #item_list {
+    li {
+      list-style-type: none;
+      padding: 20px;
+      background-color: #fff;
+      color: $d;
+      .price {
+        position: absolute;
+        right: 60px;
+        display: inline-block;
+        padding: 0 15px;
+        background-color: $y;
+        color: $d;
+        &::before {
+          content: "$ ";
+        }
+      }
+      .delete {
+        position: absolute;
+        right: 20px;
+        display: inline-block;
+        padding: 0 10px;
+        color: darken($p, 20%);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        &:hover {
+          background-color: $p;
+          color: #fff;
+        }
+      }
+    }
+    .total {
+      background-color: darken($p, 10%);
+      color: #fff;
+      .price {
+        background-color: transparent;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+  }
+}
