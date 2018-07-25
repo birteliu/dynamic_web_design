@@ -1,5 +1,5 @@
 var itemurl =
-  "http://www.monoame.com/awi_class/api/command.php?type=get&name=itemdata";
+  "https://www.monoame.com/awi_class/api/command.php?type=get&name=itemdata";
 
 //新增清單物件
 var shoplist = {};
