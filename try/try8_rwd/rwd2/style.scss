@@ -1,0 +1,133 @@
+$color_lightblue: #e9ebee;
+$color_blue: #3b5998;
+$color_white: #fff;
+$color_black: #555;
+
+$pad-w: 767px;
+$phone-w: 575px;
+@mixin pad {
+  @media screen and (max-width: $pad-w) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $phone-w) {
+    @content;
+  }
+}
+
+* {
+  //border: 1px solid #000;
+  vertical-align: middle;
+  box-sizing: border-box;
+  position: relative;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color_lightblue;
+}
+.container {
+  max-width: 1024px;
+  margin: auto;
+  .top {
+    height: 60px;
+    background-color: $color_blue;
+    padding: 0 10px;
+    img {
+      width: auto;
+      height: 40px;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    input {
+      height: 40px;
+      margin-top: 10px;
+      padding-left: 10px;
+      border-radius: 5px;
+      width: 300px;
+      border: none; //預設有 border
+      font-size: 16px;
+      outline: none;
+      @include pad {
+        width: calc(100% - 60px);
+      }
+    }
+  }
+  .middle {
+    &::after {
+      content: "";
+      display: block;
+      height: 70px;
+      background-color: #fff;
+      @include pad {
+        height: 110px;
+      }
+    }
+    .banner {
+      width: 100%;
+    }
+    .photo {
+      .pic {
+        width: 230px;
+        position: absolute;
+        left: 20px;
+        top: -170px;
+        border: 5px solid #fff;
+        @include pad {
+          width: 220px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      h4 {
+        position: absolute;
+        left: 270px;
+        white-space: nowrap;
+        top: -110px;
+        color: #fff;
+        font-size: 25px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        letter-spacing: 1px;
+        @include pad {
+          left: 50%;
+          top: 20px;
+          transform: translateX(-50%);
+          color: #333;
+          text-align: center;
+          text-shadow: none;
+        }
+        span {
+          display: block;
+          letter-spacing: 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .bottom {
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    @include pad {
+      margin-top: 0;
+    }
+    p {
+      line-height: 1;
+      @include pad {
+        &:first-child {
+          box-sizing: border-box;
+          border-top: 1px solid lighten(#333, 50%);
+          padding-top: 20px;
+        }
+      }
+
+      i {
+        width: 25px;
+        text-align: center;
+      }
+    }
+  }
+}

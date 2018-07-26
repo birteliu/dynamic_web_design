@@ -1,0 +1,142 @@
+* {
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9ebee;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.container .top {
+  height: 60px;
+  background-color: #3b5998;
+  padding: 0 10px;
+}
+
+.container .top img {
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.container .top input {
+  height: 40px;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 300px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  .container .top input {
+    width: calc(100% - 60px);
+  }
+}
+
+.container .middle::after {
+  content: "";
+  display: block;
+  height: 70px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .container .middle::after {
+    height: 110px;
+  }
+}
+
+.container .middle .banner {
+  width: 100%;
+}
+
+.container .middle .photo .pic {
+  width: 230px;
+  position: absolute;
+  left: 20px;
+  top: -170px;
+  border: 5px solid #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .container .middle .photo .pic {
+    width: 220px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.container .middle .photo h4 {
+  position: absolute;
+  left: 270px;
+  white-space: nowrap;
+  top: -110px;
+  color: #fff;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  .container .middle .photo h4 {
+    left: 50%;
+    top: 20px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #333;
+    text-align: center;
+    text-shadow: none;
+  }
+}
+
+.container .middle .photo h4 span {
+  display: block;
+  letter-spacing: 0;
+  font-size: 18px;
+}
+
+.container .bottom {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .container .bottom {
+    margin-top: 0;
+  }
+}
+
+.container .bottom p {
+  line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .container .bottom p:first-child {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 1px solid #b3b3b3;
+    padding-top: 20px;
+  }
+}
+
+.container .bottom p i {
+  width: 25px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
