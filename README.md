@@ -31,3 +31,9 @@ Learning 7-2: [js-ajax](https://birteliu.github.io/dynamic_web_design/try/try7_j
 Learning 7-3: [js-ajax_json](https://birteliu.github.io/dynamic_web_design/try/try7_js/ajax_json/)
 
 Project 4: [Buylist](https://birteliu.github.io/dynamic_web_design/buylist/)
+
+Learning 8-1: [RWD 1](https://birteliu.github.io/dynamic_web_design/try/try8_rwd/rwd1)
+
+Learning 8-2: [RWD 2](https://birteliu.github.io/dynamic_web_design/try/try8_rwd/rwd2)
+
+Project 5: [Skrollr Page](https://birteliu.github.io/dynamic_web_design/skrollr/)
