@@ -1,0 +1,15 @@
+body {
+  height: 2000px;
+}
+
+.fix-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+}

@@ -6,10 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 </head>
 
 <body>
-
+    <nav>
+        <div class="navbar">
+            <a href="#" class="brand">Stranger Things</a>
+            <ul>
+                <li>
+                    <a href="#section1">簡介</a>
+                </li>
+                <li>
+                    <a href="#section2">劇情</a>
+                </li>
+                <li>
+                    <a href="#section3">地圖</a>
+                </li>
+                <li>
+                    <a href="#section4">介紹</a>
+                </li>
+                <li>
+                    <a href="#footer">聯絡</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="banner">
+            <h2 data-0="transform: translateY(-50px)" data-500="transform: translateY(200px)">怪奇物語</h2>
+            <h5 data-0="transform: translateY(-50px)" data-500="transform: translateY(200px)">Stranger Things</h5>
+        </div>
+    </header>
+    <section id="section1">
+        <div class="container">
+            <div class="col-6">
+                <img src="img/pic2.jpg" data-0="opacity: 0; transform: translateX(-1000px)" data-500="opacity: 1; transform: translateX(0)"
+                    alt="">
+            </div>
+            <div class="col-6">
+                <h4 data-0="opacity: 0; transform: translateX(1000px)" data-500="opacity: 1; transform: translateX(0)">由杜夫兄弟創作的美國科幻恐怖影集，於2016年7月15日在 Netflix 開播</h4>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <h2>劇情介紹</h2>
+        <div class="container">
+            <div class="col-4" data-bottom-top="opacity: 0" data-center="opacity: 1">
+                <div class="img-wrap">
+                    <img src="img/pic3.jpg" alt="">
+                </div>
+                <h4>SEASON 1</h4>
+                <p>該劇主要講述了在印第安納州的小鎮霍金斯一個充斥秘密試驗和恐怖超自然力量的神秘事件的故事</p>
+            </div>
+            <div class="col-4" data-bottom-top="opacity: 0" data-center="opacity: 1">
+                <div class="img-wrap">
+                    <img src="img/pic4.jpg" alt="">
+                </div>
+                <h4>SEASON 2</h4>
+                <p>第2季與第1季聯繫緊密，兩者時間節點相隔差不多一年。第2季開場發生在一年後的萬聖節，地點依然是印第安納州的小鎮霍金斯，這幾個小傢伙打扮成抓鬼敢死隊。四個萌童中最醒目的肯定是威爾，第一季結尾時他咳嗽時吐出了一條蟲子，這顯然是為後續劇情埋下的伏筆</p>
+            </div>
+            <div class="col-4" data-bottom-top="opacity: 0" data-center="opacity: 1">
+                <div class="img-wrap">
+                    <img src="img/pic5.jpg" alt="">
+                </div>
+                <h4>SEASON 3</h4>
+                <p>第三季將於今年三月或四月開拍</p>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="container">
+            <div class="col-4 map" data-bottom-top="background-size: 150%; background-position: 0% 0%;" data-center="background-size: 100%; background-position:
+            50% 50%;">
+                <div class="location">X</div>
+            </div>
+            <div class="col-8">
+                <div class="col-12">
+                    <h3>Stranger Things</h3>
+                    <hr>
+                    <div class="col-4">
+                        <i class="fas fa-film" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"></i>
+                        <h4>影集</h4>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-tv" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"></i>
+                        <h4>電視</h4>
+                    </div>
+                    <div class="col-4">
+                        <i class="fab fa-optin-monster" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"></i>
+                        <h4>奇幻</h4>
+                    </div>
+                    <p>Stranger Things 講述一名小男孩失蹤後，一位有超能力的女孩幫男孩的朋友尋找男孩的下落，而男孩的哥哥與局長也各自展開他們的調查。本劇將時間點設在 1980 年代的印地安納州，向 80 年代影集與電影的流行文化致敬，如史蒂芬·史匹柏、約翰·卡本特、史蒂芬·金和喬治·盧卡斯等等。本劇釋出後，其劇情、演出與配樂都向80年代的經典電影及影集致敬，因而獲得了極高的評價。劇集現已播出兩季，而杜夫兄弟確認將會有第三季，並預計將劇集延續至第四季或第五季來作結尾。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section4">
+        <h2>怪奇物語</h2>
+        <div class="container">
+            <div class="col-6">
+                <img src="img/pic1.png" alt="" data-bottom-top="filter: grayscale(100%)" data-center="filter: grayscale(0%)">
+            </div>
+            <div class="col-6">
+                <i class="fab fa-cc-discover" data-bottom-top="transform: translateX(50px)" data-center="transform: translateX(0px)"></i>
+                <p data-bottom-top="transform: translateX(50px)" data-center="transform: translateX(0px)">1983 年 11 月 6 日，在印第安納州的一個霍金斯小鎮，12 歲的小男孩威爾·拜爾斯離奇失蹤，隨著親朋好友與當地警方不斷地搜查中，他們捲入離奇的神秘事件中，涉及最機密的政府實驗、接觸到駭人的超自然力量，還碰上一名詭異的小女孩。</p>
+                <i class="far fa-surprise" data-bottom-top="transform: translateX(50px)" data-center="transform: translateX(0px)"></i>
+                <p data-bottom-top="transform: translateX(50px)" data-center="transform: translateX(0px)">2016 年 7 月 15 日，第 1 季全 8 集故事在 Netflix 網上發布，每集時長約為 1 小時，畫質標準為超高清 4K。2016 年 8 月 31 日，Netflix 正式續訂第 2 季 9 集。2017
+                    年 10 月 27 日，Netflix 發布了第 2 季全季 9 集集數，首發畫質為高清 ( HDR )。</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h4>瞭解更多 Stranger Things</h4>
+        <input type="text" placeholder="zyi870213@gmail.com">
+        <button>Contact Us</button>
+    </footer>
+    <script>
+        $(window).scroll(function (evt) {
+            if ($(window).scrollTop() > 0) {
+                $(".navbar").addClass("bg-white");
+                $(".navbar a").addClass("color-black");
+            } else {
+                $(".navbar").removeClass("bg-white");
+                $(".navbar a").removeClass("color-black");
+            }
+        })
+    </script>
+    <script>
+        var s = skrollr.init();
+    </script>
 </body>
 
 </html>
