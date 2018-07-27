@@ -81,6 +81,7 @@ header {
   text-align: center;
   background-image: url(img/banner.jpg);
   background-attachment: fixed;
+  background-size: cover;
 }
 
 header .banner {

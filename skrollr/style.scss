@@ -79,6 +79,7 @@ header {
   text-align: center;
   background-image: url(img/banner.jpg);
   background-attachment: fixed;
+  background-size: cover;
   .banner {
     padding: 200px 0;
     @include phone {
