@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 </head>
 
-<body>
+<body id="skrollr-body">
     <nav>
         <div class="navbar">
             <a href="#" class="brand">Stranger Things</a>
@@ -38,8 +38,8 @@
     </nav>
     <header>
         <div class="banner">
-            <h2 data-0="transform: translateY(-50px)" data-500="transform: translateY(200px)">怪奇物語</h2>
-            <h5 data-0="transform: translateY(-50px)" data-500="transform: translateY(200px)">Stranger Things</h5>
+            <h2 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">怪奇物語</h2>
+            <h5 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">Stranger Things</h5>
         </div>
     </header>
     <section id="section1">
@@ -137,7 +137,26 @@
                 $(".navbar a").removeClass("color-black");
             }
         })
+        if (screen.width < 575) {
+            $(".banner h2").removeAttr("data-0");
+            $(".banner h2").removeAttr("data-500");
+            $(".banner h5").removeAttr("data-0");
+            $(".banner h5").removeAttr("data-500");
+            $(".col-6 img").removeAttr("data-0");
+            $(".col-6 img").removeAttr("data-500");
+            $(".col-6 h4").removeAttr("data-0");
+            $(".col-6 h4").removeAttr("data-500");
+            $(".col-4").removeAttr("data-bottom-top");
+            $(".col-4").removeAttr("data-center");
+            $(".col-6 i").removeAttr("data-bottom-top");
+            $(".col-6 i").removeAttr("data-center");
+            $(".col-6 p").removeAttr("data-bottom-top");
+            $(".col-6 p").removeAttr("data-center");
+            $(".col-6 img").removeAttr("data-bottom-top");
+            $(".col-6 img").removeAttr("data-center");
+        }
     </script>
+
     <script>
         var s = skrollr.init();
     </script>

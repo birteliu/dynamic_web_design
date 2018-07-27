@@ -21,7 +21,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: scroll;
+  overflow: auto !important;
 }
 
 nav {
@@ -79,9 +79,8 @@ header {
   text-align: center;
   background-image: url(img/banner.jpg);
   background-attachment: fixed;
-  background-size: cover;
   .banner {
-    padding: 250px 0;
+    padding: 200px 0;
     @include phone {
       padding: 200px 0;
     }
@@ -154,6 +153,9 @@ header {
       @include pad {
         height: 300px;
       }
+      @include phone {
+        height: 150px;
+      }
       img {
         width: 100%;
       }
@@ -169,6 +171,9 @@ header {
       background-image: url(img/pic6.jpg);
       height: 380px;
       background-size: 100% auto;
+      @include phone {
+        background-size: cover;
+      }
     }
     .col-4 {
       width: 40%;
