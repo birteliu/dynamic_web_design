@@ -36,8 +36,10 @@ Learning 8-1: [RWD 1](https://birteliu.github.io/dynamic_web_design/try/try8_rwd
 
 Learning 8-2: [RWD 2](https://birteliu.github.io/dynamic_web_design/try/try8_rwd/rwd2)
 
+Learning 9: [skrollr](https://birteliu.github.io/dynamic_web_design/try/try9_skrollr/)
+
 Project 5: [Skrollr Page](https://birteliu.github.io/dynamic_web_design/skrollr/)
 
-Learning 9-1: [mousemove1](https://birteliu.github.io/dynamic_web_design/try/try9_mousemove/index.html)
+Learning 9-1: [mousemove1](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index.html)
 
-Learning 9-2: [mousemove1](https://birteliu.github.io/dynamic_web_design/try/try9_mousemove/index2.html)
+Learning 9-2: [mousemove2](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index2.html)
