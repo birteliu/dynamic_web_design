@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e6af2e;
+}
+img {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: 0.5s;
+}
+#cat_yellow {
+  left: 30%;
+}
+#cat_gray {
+  left: 70%;
+}
+#cross {
+  position: absolute;
+}
+#cross:before,
+#cross:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 10px;
+  width: 50px;
+  left: 50%;
+  transform: rotate(45deg);
+  top: 50%;
+}
+#cross:after {
+  transform: rotate(-45deg);
+}

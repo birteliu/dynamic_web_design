@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <img id="cat" src="img/cat_top.png" alt="">
+    <div id="cross"></div>
+    <script>
+        $(window).mousemove(function (evt) {
+            var x = evt.pageX;
+            var y = evt.pageY;
+            console.log(x);
+
+            $("#cross").css("left", x + "px");
+            $("#cross").css("top", y + "px");
+
+            if (x < $(window).width() / 2 - 50) {
+                $("#cat").attr("src", "img/cat_left.png")
+            } else if (x > $(window).width() / 2 + 50) {
+                $("#cat").attr("src", "img/cat_right.png")
+            } else {
+                $("#cat").attr("src", "img/cat_top.png")
+            }
+
+            if (x < $(window).width() / 2 - 50 && y < $(window).height() / 2) {
+                $("#cat").attr("src", "img/cat_leftop.png")
+            }
+            if (x > $(window).width() / 2 + 50 && y < $(window).height() / 2) {
+                $("#cat").attr("src", "img/cat_righttop.png")
+            }
+        })
+    </script>
+</body>
+
+</html>

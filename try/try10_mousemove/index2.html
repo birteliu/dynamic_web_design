@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <img id="cat_blue" src="img/cat_blue_cat.png" alt="">
+    <img id="cat_gray" src="img/cat_grey_cat.png" alt="">
+    <img id="cat_yellow" src="img/cat_yellow_cat.png" alt="">
+    <div id="cross"></div>
+    <script>
+        $(window).mousemove(function (evt) {
+            var x = evt.pageX;
+            var y = evt.pageY;
+            console.log(x, y);
+
+            $("#cross").css("left", x + "px");
+            $("#cross").css("top", y + "px");
+
+            //catplace 抓貓的中線 = #cat_yellow.offset 在頁面中偏移的位置.left 加上自己一半的寬度
+            var catplace = $("#cat_yellow").offset().left + $("#cat_yellow").width() / 2;
+
+            //Math.abs 絕對值的 (x 減掉貓的位置) < 進到中間隔 80 px 的位置
+            if (Math.abs(x - catplace) < 80) {
+                $("#cat_yellow").css("bottom", "0px");
+            } else {
+                $("#cat_yellow").css("bottom", "-20px");
+            }
+
+            var catplace = $("#cat_blue").offset().left + $("#cat_blue").width() / 2;
+            if (Math.abs(x - catplace) < 80) {
+                $("#cat_blue").css("bottom", "0px");
+            } else {
+                $("#cat_blue").css("bottom", "-20px");
+            }
+
+            var catplace = $("#cat_gray").offset().left + $("#cat_gray").width() / 2;
+            if (Math.abs(x - catplace) < 80) {
+                $("#cat_gray").css("bottom", "0px");
+            } else {
+                $("#cat_gray").css("bottom", "-20px");
+            }
+
+        })
+    </script>
+</body>
+
+</html>
