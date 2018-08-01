@@ -117,17 +117,20 @@ section#island {
           font-size: 3em;
           letter-spacing: 2px;
           margin-bottom: 0;
+          transition: 0.1s;
         }
         h4 {
           font-size: 2.5em;
           text-align: center;
           letter-spacing: 1px;
           margin-top: 0;
+          transition: 0.2s;
         }
         h5 {
           font-size: 1.5em;
           line-height: 1.5;
           font-weight: normal;
+          transition: 0.3s;
         }
       }
       img {
@@ -153,24 +156,24 @@ section#island {
       }
     }
   }
-  #cross {
-    position: absolute;
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      background-color: #fff;
-      position: absolute;
-      height: 10px;
-      width: 50px;
-      left: 50%;
-      top: 50%;
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
-  }
+  //   #cross {
+  //     position: absolute;
+  //     &:before,
+  //     &:after {
+  //       content: "";
+  //       display: block;
+  //       background-color: #fff;
+  //       position: absolute;
+  //       height: 10px;
+  //       width: 50px;
+  //       left: 50%;
+  //       top: 50%;
+  //       transform: rotate(45deg);
+  //     }
+  //     &:after {
+  //       transform: rotate(-45deg);
+  //     }
+  //   }
   .sailboat {
     position: absolute;
     right: 20px;
@@ -242,6 +245,7 @@ section#seaside {
   background-color: #c2e248;
   padding: 30px 20px 50px 20px;
   position: relative;
+  overflow: hidden;
   .container {
     font-size: 0;
     width: 100%;
@@ -291,6 +295,7 @@ section#seaside {
         width: 200px;
         position: absolute;
         bottom: 0;
+        transition: 0.5s;
       }
       .tree1 {
         right: 20px;
