@@ -1,0 +1,394 @@
+* {
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: top;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  color: #00c3d7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav .container {
+  padding: 10px 50px;
+  font-size: 0;
+}
+
+nav .container .navbar-brand {
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 30%;
+  display: inline-block;
+  line-height: 50px;
+}
+
+nav .container ul {
+  display: inline-block;
+  width: 70%;
+  text-align: right;
+  font-size: 15px;
+}
+
+nav .container ul li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  color: #00c3d7;
+  font-size: 1em;
+}
+
+header {
+  padding: 200px 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1fbff), to(#a2efff));
+  background: linear-gradient(0deg, #f1fbff, #a2efff);
+  position: relative;
+  overflow: hidden;
+}
+
+header h2 {
+  font-size: 3.5em;
+  text-align: center;
+  color: #00c3d7;
+  letter-spacing: 2px;
+}
+
+header h6 {
+  color: #00c3d7;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: normal;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 85%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header h6:after {
+  content: "V";
+  display: block;
+  color: #00c3d7;
+  -webkit-transform: scaleX(1.5) scaleY(0.5);
+          transform: scaleX(1.5) scaleY(0.5);
+  padding-top: 10px;
+}
+
+header h6.opacity1 {
+  opacity: 1;
+}
+
+header img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  -webkit-animation: up-in 2s both;
+          animation: up-in 2s both;
+}
+
+section#island {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff3e6), to(#11bbf6));
+  background: linear-gradient(0deg, #fff3e6, #11bbf6);
+  color: #fff;
+  padding: 50px 20px 100px 20px;
+  position: relative;
+}
+
+section#island .container {
+  padding: 20px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+section#island .container .col-12 {
+  width: 100%;
+  font-size: 0;
+}
+
+section#island .container .col-12 .col-4 {
+  display: inline-block;
+  width: 40%;
+  font-size: 15px;
+}
+
+section#island .container .col-12 .col-8 {
+  display: inline-block;
+  width: 60%;
+  font-size: 15px;
+}
+
+section#island .container .col-12 .col-8 h3 {
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+section#island .container .col-12 .col-8 h4 {
+  font-size: 2.5em;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+section#island .container .col-12 .col-8 h5 {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+section#island .container .col-12 img.wave1 {
+  width: 15%;
+  margin-left: 40%;
+}
+
+section#island .container .col-12 img.wave2 {
+  width: 20%;
+  padding-top: 40px;
+  margin-left: 30%;
+}
+
+section#island .container .col-12 img.wave3 {
+  width: 10%;
+  margin-left: 65%;
+  margin-top: -30px;
+}
+
+section#island .container .col-12 img.wave4 {
+  width: 17%;
+  margin-left: 40%;
+}
+
+section#island #cross {
+  position: absolute;
+}
+
+section#island #cross:before, section#island #cross:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 10px;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+section#island #cross:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+section#island .sailboat {
+  position: absolute;
+  right: 20px;
+  bottom: 17%;
+  width: 180px;
+}
+
+section#island .bottom-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 120%;
+  -webkit-animation: up-in 2s both;
+          animation: up-in 2s both;
+}
+
+section#beach {
+  background-color: #fff6df;
+  padding: 20px 20px 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+section#beach h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #ff6550;
+  font-size: 2.5em;
+  padding-top: 1.5em;
+}
+
+section#beach .container {
+  font-size: 0;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+section#beach .container .col-4 {
+  display: inline-block;
+  width: 33.33%;
+  font-size: 15px;
+}
+
+section#beach .container .col-4 img {
+  width: 100%;
+  padding: 30px;
+}
+
+section#beach .container .col-6 {
+  display: inline-block;
+  width: 50%;
+  font-size: 15px;
+  padding: 2.5px;
+}
+
+section#beach .container .col-6 img {
+  width: 100%;
+  border: 5px solid #fff6df;
+}
+
+section#beach .container .col-6 .col-12 {
+  font-size: 0;
+  width: 100%;
+}
+
+section#beach .container .col-6 .col-12 .img-wrap {
+  display: inline-block;
+  width: 50%;
+  font-size: 15px;
+}
+
+section#beach .bottom-img {
+  position: absolute;
+  left: -50px;
+  width: 120%;
+  -webkit-animation: up-in 2s both;
+          animation: up-in 2s both;
+}
+
+section#seaside {
+  background-color: #c2e248;
+  padding: 30px 20px 50px 20px;
+  position: relative;
+}
+
+section#seaside .container {
+  font-size: 0;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+section#seaside .container .col-6 {
+  display: inline-block;
+  width: 50%;
+  font-size: 15px;
+}
+
+section#seaside .container .col-6 .mailbox {
+  background-color: #fff;
+  padding: 30px;
+  color: #6ab700;
+}
+
+section#seaside .container .col-6 .mailbox h5 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+section#seaside .container .col-6 .mailbox label {
+  display: block;
+  font-size: 1.1em;
+  padding: 15px 0 10px 0;
+}
+
+section#seaside .container .col-6 .mailbox input,
+section#seaside .container .col-6 .mailbox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6ab700;
+  outline: none;
+}
+
+section#seaside .container .col-6 .contact {
+  padding: 30px;
+  color: #4c8400;
+}
+
+section#seaside .container .col-6 .contact h5 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+section#seaside .container .col-6 .contact h6 {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+section#seaside .container .col-6 .tree1,
+section#seaside .container .col-6 .tree2,
+section#seaside .container .col-6 .tree3 {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+section#seaside .container .col-6 .tree1 {
+  right: 20px;
+}
+
+section#seaside .container .col-6 .tree2 {
+  right: 130px;
+}
+
+section#seaside .container .col-6 .tree3 {
+  right: 250px;
+}
+
+footer {
+  background-color: #776956;
+  color: #fff;
+  border-top: 20px solid #7b4d36;
+}
+
+footer h3 {
+  margin: 0;
+  padding: 50px 0;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 3em;
+}
+
+@-webkit-keyframes up-in {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes up-in {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
