@@ -8,6 +8,19 @@ $color-orange: #ff6550;
   transform: translate(-50%, -50%);
 }
 
+$pad-w: 767px;
+$phone-w: 575px;
+@mixin pad {
+  @media screen and (max-width: $pad-w) {
+    @content;
+  }
+}
+@mixin phone {
+  @media screen and (max-width: $phone-w) {
+    @content;
+  }
+}
+
 * {
   font-family: "Lato", sans-serif;
   //border: 1px solid #000;
@@ -23,7 +36,7 @@ nav {
   position: fixed;
   height: 70px;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   background-color: #fff;
   color: $ocean;
   transition: 0.5s;
@@ -37,14 +50,62 @@ nav {
       display: inline-block;
       line-height: 50px;
     }
+    button {
+      width: 40px;
+      height: 5px;
+      background-color: #fff;
+      border: none;
+      display: none;
+      text-align: right;
+      float: right;
+      margin-top: 13px;
+      &:before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 5px;
+        background-color: #fff;
+        margin-top: 10px;
+        margin-left: -7px;
+        z-index: 12;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 5px;
+        background-color: #fff;
+        margin-top: 6px;
+        margin-left: -7px;
+        z-index: 12;
+      }
+      &.white-color:before,
+      &.white-color:after {
+        background-color: #fff;
+      }
+      &.ocean-color:before,
+      &.ocean-color:after,
+      &.ocean-color {
+        background-color: #00c3d7;
+      }
+      @include phone {
+        display: inline-block;
+      }
+    }
     ul {
       display: inline-block;
       width: 70%;
       text-align: right;
       font-size: 15px;
+      @include phone {
+        display: none;
+        line-height: 2;
+        float: right;
+      }
       li {
         display: inline-block;
         padding-left: 20px;
+
         a {
           text-decoration: none;
           color: $ocean;
@@ -98,9 +159,15 @@ section#island {
   color: #fff;
   padding: 50px 20px 100px 20px;
   position: relative;
+  @include phone {
+    padding-bottom: 150px;
+  }
   .container {
     padding: 20px;
     transform: rotate(15deg);
+    @include phone {
+      transform: rotate(0deg);
+    }
     .col-12 {
       width: 100%;
       font-size: 0;
@@ -108,16 +175,26 @@ section#island {
         display: inline-block;
         width: 40%;
         font-size: 15px;
+        @include phone {
+          width: 100%;
+        }
       }
       .col-8 {
         display: inline-block;
         width: 60%;
         font-size: 15px;
+        @include phone {
+          width: 100%;
+        }
         h3 {
           font-size: 3em;
           letter-spacing: 2px;
           margin-bottom: 0;
           transition: 0.1s;
+          @include phone {
+            margin-top: 0;
+            text-align: center;
+          }
         }
         h4 {
           font-size: 2.5em;
@@ -179,6 +256,10 @@ section#island {
     right: 20px;
     bottom: 17%;
     width: 180px;
+    @include phone {
+      bottom: 35px;
+      width: 150px;
+    }
   }
   .bottom-img {
     position: absolute;
@@ -209,9 +290,15 @@ section#beach {
       display: inline-block;
       width: 33.33%;
       font-size: 15px;
+      @include phone {
+        width: 100%;
+      }
       img {
         width: 100%;
         padding: 30px;
+        @include phone {
+          padding: 10px 30px;
+        }
       }
     }
     .col-6 {
@@ -219,9 +306,45 @@ section#beach {
       width: 50%;
       font-size: 15px;
       padding: 2.5px;
+      position: relative;
+      @include phone {
+        width: 100%;
+      }
+      &.mask {
+        cursor: pointer;
+        &:before {
+          content: "";
+          display: block;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+          .info {
+            opacity: 1;
+            z-index: 5;
+          }
+        }
+      }
       img {
         width: 100%;
         border: 5px solid #fff6df;
+      }
+      .info {
+        @include ab_center;
+        color: #fff;
+        font-size: 1.5em;
+        opacity: 0;
+        transition: 0.5s;
       }
       .col-12 {
         font-size: 0;
@@ -255,6 +378,9 @@ section#seaside {
       display: inline-block;
       width: 50%;
       font-size: 15px;
+      @include phone {
+        width: 100%;
+      }
       .mailbox {
         background-color: #fff;
         padding: 30px;
@@ -279,6 +405,9 @@ section#seaside {
       .contact {
         padding: 30px;
         color: darken(#6ab700, 10%);
+        @include phone {
+          height: 500px;
+        }
         h5 {
           font-size: 1.5em;
           margin-top: 0;
@@ -299,12 +428,22 @@ section#seaside {
       }
       .tree1 {
         right: 20px;
+        @include phone {
+          right: 0;
+        }
       }
       .tree2 {
         right: 130px;
+        @include phone {
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
       .tree3 {
         right: 250px;
+        @include phone {
+          left: 0;
+        }
       }
     }
   }

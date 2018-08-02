@@ -15,7 +15,7 @@ nav {
   position: fixed;
   height: 70px;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   background-color: #fff;
   color: #00c3d7;
   -webkit-transition: 0.5s;
@@ -35,11 +35,66 @@ nav .container .navbar-brand {
   line-height: 50px;
 }
 
+nav .container button {
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  border: none;
+  display: none;
+  text-align: right;
+  float: right;
+  margin-top: 13px;
+}
+
+nav .container button:before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-left: -7px;
+  z-index: 12;
+}
+
+nav .container button:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  margin-top: 6px;
+  margin-left: -7px;
+  z-index: 12;
+}
+
+nav .container button.white-color:before, nav .container button.white-color:after {
+  background-color: #fff;
+}
+
+nav .container button.ocean-color:before, nav .container button.ocean-color:after, nav .container button.ocean-color {
+  background-color: #00c3d7;
+}
+
+@media screen and (max-width: 575px) {
+  nav .container button {
+    display: inline-block;
+  }
+}
+
 nav .container ul {
   display: inline-block;
   width: 70%;
   text-align: right;
   font-size: 15px;
+}
+
+@media screen and (max-width: 575px) {
+  nav .container ul {
+    display: none;
+    line-height: 2;
+    float: right;
+  }
 }
 
 nav .container ul li {
@@ -114,10 +169,23 @@ section#island {
   position: relative;
 }
 
+@media screen and (max-width: 575px) {
+  section#island {
+    padding-bottom: 150px;
+  }
+}
+
 section#island .container {
   padding: 20px;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
+}
+
+@media screen and (max-width: 575px) {
+  section#island .container {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 section#island .container .col-12 {
@@ -131,10 +199,22 @@ section#island .container .col-12 .col-4 {
   font-size: 15px;
 }
 
+@media screen and (max-width: 575px) {
+  section#island .container .col-12 .col-4 {
+    width: 100%;
+  }
+}
+
 section#island .container .col-12 .col-8 {
   display: inline-block;
   width: 60%;
   font-size: 15px;
+}
+
+@media screen and (max-width: 575px) {
+  section#island .container .col-12 .col-8 {
+    width: 100%;
+  }
 }
 
 section#island .container .col-12 .col-8 h3 {
@@ -143,6 +223,13 @@ section#island .container .col-12 .col-8 h3 {
   margin-bottom: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+}
+
+@media screen and (max-width: 575px) {
+  section#island .container .col-12 .col-8 h3 {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 section#island .container .col-12 .col-8 h4 {
@@ -191,6 +278,13 @@ section#island .sailboat {
   width: 180px;
 }
 
+@media screen and (max-width: 575px) {
+  section#island .sailboat {
+    bottom: 35px;
+    width: 150px;
+  }
+}
+
 section#island .bottom-img {
   position: absolute;
   right: 0;
@@ -228,9 +322,21 @@ section#beach .container .col-4 {
   font-size: 15px;
 }
 
+@media screen and (max-width: 575px) {
+  section#beach .container .col-4 {
+    width: 100%;
+  }
+}
+
 section#beach .container .col-4 img {
   width: 100%;
   padding: 30px;
+}
+
+@media screen and (max-width: 575px) {
+  section#beach .container .col-4 img {
+    padding: 10px 30px;
+  }
 }
 
 section#beach .container .col-6 {
@@ -238,11 +344,59 @@ section#beach .container .col-6 {
   width: 50%;
   font-size: 15px;
   padding: 2.5px;
+  position: relative;
+}
+
+@media screen and (max-width: 575px) {
+  section#beach .container .col-6 {
+    width: 100%;
+  }
+}
+
+section#beach .container .col-6.mask {
+  cursor: pointer;
+}
+
+section#beach .container .col-6.mask:before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section#beach .container .col-6.mask:hover:before {
+  opacity: 1;
+}
+
+section#beach .container .col-6.mask:hover .info {
+  opacity: 1;
+  z-index: 5;
 }
 
 section#beach .container .col-6 img {
   width: 100%;
   border: 5px solid #fff6df;
+}
+
+section#beach .container .col-6 .info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5em;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 section#beach .container .col-6 .col-12 {
@@ -284,6 +438,12 @@ section#seaside .container .col-6 {
   font-size: 15px;
 }
 
+@media screen and (max-width: 575px) {
+  section#seaside .container .col-6 {
+    width: 100%;
+  }
+}
+
 section#seaside .container .col-6 .mailbox {
   background-color: #fff;
   padding: 30px;
@@ -314,6 +474,12 @@ section#seaside .container .col-6 .contact {
   color: #4c8400;
 }
 
+@media screen and (max-width: 575px) {
+  section#seaside .container .col-6 .contact {
+    height: 500px;
+  }
+}
+
 section#seaside .container .col-6 .contact h5 {
   font-size: 1.5em;
   margin-top: 0;
@@ -339,12 +505,32 @@ section#seaside .container .col-6 .tree1 {
   right: 20px;
 }
 
+@media screen and (max-width: 575px) {
+  section#seaside .container .col-6 .tree1 {
+    right: 0;
+  }
+}
+
 section#seaside .container .col-6 .tree2 {
   right: 130px;
 }
 
+@media screen and (max-width: 575px) {
+  section#seaside .container .col-6 .tree2 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 section#seaside .container .col-6 .tree3 {
   right: 250px;
+}
+
+@media screen and (max-width: 575px) {
+  section#seaside .container .col-6 .tree3 {
+    left: 0;
+  }
 }
 
 footer {

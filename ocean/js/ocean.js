@@ -6,11 +6,15 @@ if (
       $("nav").css("background-color", "transparent");
       $("nav").css("color", "#fff");
       $("nav a").css("color", "#fff");
+      $("nav button").css("background-color", "#fff");
+      $("nav button").toggleClass("white-color");
     } else {
       $(".explore").removeClass("opacity1");
       $("nav").css("background-color", "#fff");
       $("nav").css("color", "#00c3d7");
       $("nav a").css("color", "#00c3d7");
+      $("nav button").css("background-color", "#00c3d7");
+      $("nav button").toggleClass("ocean-color");
     }
   })
 );
