@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Vue.js 使用大括號 { } 與變數代換</h2>
+        <hr>
+        <p>我是{{name}}，來自{{location}}，
+            <br>正在學習{{learn}}}，{{learn}}就像是一個{{vue_text}}。
+        </p>
+        <p>
+            Vue 的代換也可以用物件來表示，甚至陣列和判斷，
+            <br>只要在裡面用
+            <span>{{natation}}</span> 括起來就可以了！
+        </p>
+        <p>我的技能有：
+            <ul>陣列寫法一：一個一個寫
+                <li>{{skills[0]}}</li>
+                <li>{{skills[1]}}</li>
+                <li>{{skills[2]}}</li>
+            </ul>
+            <ul>陣列寫法二：v-for 列表渲染
+                <li v-for="skill in skills">{{skill}}</li>
+            </ul>
+        </p>
+        <p>這個課程我看了 {{infos.month}} 個月了，希望可以持續進步</p>
+        <p>兩組大括號預設是帶入一般的文字，三組大括號可以帶入 html 原始碼。</p>
+        <div>{{{html}}}</div>
+    </div>
+    <br>
+
+    <div id="app2">
+        <h2>Vue.js 使用 v-for 抓出陣列資料</h2>
+        <hr>
+
+        <h3>最簡易的陣列清單 v-for="項目 in 陣列"</h3>
+        <ul>
+            <li v-for="item in shoplist">{{item}}</li>
+        </ul>
+
+        <h3>陣列清單中放入一個商品物件，有編號、名字、價錢</h3>
+        <ul>
+            <li v-for="(id, item) in shoplist2">
+                <div class="name">{{id+1}}. {{item.name}}</div>
+                <div class="price">$ {{item.price}}</div>
+            </li>
+        </ul>
+
+        <h3>使用第二層 v-for，在商品物件中放生產國家清單</h3>
+        <ul>
+            <li v-for="(id, item) in shoplist3">
+                <div>{{id+1}}.</div>
+                <div>名稱： {{item.name}}</div>
+                <div>價格： $ {{item.price}}</div>
+                <div>產地：
+                    <span v-for="country in item.produce" class="country">{{country}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        //app
+        var vm = new Vue({  //新增一個 vue 的監測機器
+            el: "#app", //element 代表要作用的範圍
+            data: {   //參數
+                name: "劉豪萱",
+                location: "高雄",
+                learn: "Vue.js",
+                vue_text: "填資料空格的 js 前端框架 ( 寫好的 js 函式庫 )",
+                natation: "{{變數名稱}}",
+                skills: ["網頁設計", "平面設計", "程式開發"],
+                infos: {
+                    month: 4    //{{infos.month}} 表示 infos 裡面的 month 的值  
+                },
+                html: "<div class='block'>TEST1</div><div class='block'>TEST2</div><div class='block'>TEST3</div>"
+            }
+        })
+
+        //app2
+        var app2_data = {
+            shoplist: ["蘋果", "香蕉", "鳳梨"],
+            shoplist2: [
+                {
+                    name: "apple",
+                    price: 500
+                },
+                {
+                    name: "banana",
+                    price: 1000
+                },
+                {
+                    name: "pinapple",
+                    price: 1500
+                }
+            ],
+            shoplist3: [
+                {
+                    name: "apple",
+                    price: 500,
+                    produce: ["美國", "日本"]
+                },
+                {
+                    name: "banana",
+                    price: 1000,
+                    produce: ["加拿大", "台灣", "日本"]
+                },
+                {
+                    name: "pinapple",
+                    price: 1500,
+                    produce: ["韓國", "菲律賓"]
+                }
+            ]
+        }
+        var vm = new Vue({
+            el: "#app2",
+            data: app2_data
+        })
+    </script>
+</body>
+
+</html>
