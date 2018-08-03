@@ -40,8 +40,10 @@ Learning 9: [skrollr](https://birteliu.github.io/dynamic_web_design/try/try9_skr
 
 Project 5: [Skrollr Page](https://birteliu.github.io/dynamic_web_design/skrollr/)
 
-Learning 9-1: [mousemove1](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index.html)
+Learning 10-1: [mousemove1](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index.html)
 
-Learning 9-2: [mousemove2](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index2.html)
+Learning 10-2: [mousemove2](https://birteliu.github.io/dynamic_web_design/try/try10_mousemove/index2.html)
 
 Project 6: [Ocean](https://birteliu.github.io/dynamic_web_design/ocean/index.html)
+
+Learning 11: [vue.js](https://birteliu.github.io/dynamic_web_design/try/try11_vue/)
