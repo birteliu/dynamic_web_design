@@ -12,7 +12,7 @@
 
 <body>
     <div id="app">
-        <h2>Vue.js 使用大括號 { } 與變數代換</h2>
+        <h2>ㄧ、Vue.js 使用大括號 { } 與變數代換</h2>
         <hr>
         <p>我是{{name}}，來自{{location}}，
             <br>正在學習{{learn}}}，{{learn}}就像是一個{{vue_text}}。
@@ -39,7 +39,7 @@
     <br>
 
     <div id="app2">
-        <h2>Vue.js 使用 v-for 抓出陣列資料</h2>
+        <h2>二、Vue.js 使用 v-for 抓出陣列資料</h2>
         <hr>
 
         <h3>最簡易的陣列清單 v-for="項目 in 陣列"</h3>
@@ -66,6 +66,39 @@
                 </div>
             </li>
         </ul>
+    </div>
+    <br>
+
+    <div id="app3">
+        <h2>三、Vue.js 使用者互動</h2>
+        <hr>
+        <h3>使用 v-modal="變數名稱" 即時偵測輸入改變</h3>
+        <label for="">姓名：</label>
+        <input type="text" v-model="name">
+        <br>
+        <label for="">訊息：</label>
+        <input type="text" v-model="message">
+        <br>
+        <label for="">顏色：</label>
+        <input type="text" v-model="color.backgroundColor">
+        <br>
+        <label for="">Class：</label>
+        <input type="text" v-model="class" placeholder="radius/circle">
+        <br>
+        <div v-for="(id, book) in books">
+            <label for="">Book {{id+1}}：</label>
+            <input type="text" v-model="book">
+        </div>
+
+        <div class="box">
+            <h4>哈囉，{{name}}</h4>
+            <p>這裡{{message}}</p>
+            <p>下面方塊的顏色是：{{color.backgroundColor}}</p>
+            <div class="block {{class}}" v-bind:style="color"></div>
+            <ul>
+                <li v-for="book in books">{{book}}</li>
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -124,6 +157,21 @@
         var vm = new Vue({
             el: "#app2",
             data: app2_data
+        })
+
+        //app3
+        var app3_data = {
+            name: "劉豪萱",
+            message: "給你一則訊息",
+            color: {
+                backgroundColor: 'red'
+            },
+            class: "",
+            books: ["風之影", "鹽的代價", "父親的失樂園"]
+        }
+        var vm = new Vue({
+            el: "#app3",
+            data: app3_data
         })
     </script>
 </body>

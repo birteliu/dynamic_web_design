@@ -61,3 +61,35 @@ h3 {
 .country:last-child:after {
   content: "";
 }
+#app3 .box {
+  border: 1px solid #000;
+  margin-top: 10px;
+  padding: 20px;
+}
+#app3 label,
+#app3 input {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+#app3 input {
+  padding: 10px;
+  width: 500px;
+  outline: none;
+  border: 1px solid #000;
+}
+#app3 h4 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#app3 .block {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+.radius {
+  border-radius: 10px;
+}
+.circle {
+  border-radius: 50%;
+}
