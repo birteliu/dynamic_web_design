@@ -49,3 +49,5 @@ Project 6: [Ocean](https://birteliu.github.io/dynamic_web_design/ocean/index.htm
 Learning 11-1: [vue.js](https://birteliu.github.io/dynamic_web_design/try/try11_vue/)
 
 Learning 11-2: [vue.js/v-if](https://birteliu.github.io/dynamic_web_design/try/try11_vue/vue_vif/)
+
+Learning 11-3: [vue.js/v-on](https://birteliu.github.io/dynamic_web_design/try/try11_vue/vue_von/)

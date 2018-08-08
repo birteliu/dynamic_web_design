@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>使用 v-on 呼叫 / method 寫 function 建立 js 事件
+            <br>( 按下去要有動作，動作應該要怎麼對應，在 vue 有特殊函式可以幫助做這些事 )</h2>
+        <button class="addbtn" v-on:click="add('apple')">+ Apple</button>
+        <button class="addbtn" v-on:click="add('pinapple')">+ Pinapple</button>
+        <button class="addbtn" v-on:click="add('pen')">+ Pen</button>
+        <h5>狀態： {{status}}</h5>
+        <h5>列表總共有 {{fruits.length}} 個項目，有 {{totals.pen}} 支筆、{{totals.apple}} 顆蘋果、{{totals.pinapple}} 顆鳳梨</h5>
+        <div class="fruit" v-for="(id, fruit) in fruits" track-by="$index">
+            <div class="name">{{id+1}}. {{fruit}}</div>
+            <img src="http://simpleicon.com/wp-content/uploads/pen-15.png" alt="" v-if="fruit == 'pen'">
+            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/181946-200.png" alt="" v-if="fruit == 'pinapple'">
+            <img src="http://image.flaticon.com/icons/svg/25/25345.svg" alt="" v-if="fruit == 'apple'">
+            <button v-on:click="remove(id, fruit)">X</button>
+        </div>
+
+    </div>
+    <script src="vue_von.js"></script>
+</body>
+
+</html>
