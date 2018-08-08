@@ -6,10 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+
 </head>
 
 <body>
+    <div id="app">
+        <h2>使用 Vue.js 計算呈現資訊 / v-if</h2>
+        <h3>實戰博客來排行榜資料轉換 html </h3>
 
+        <label for="">詳細模式
+            <input type="checkbox" v-model="mode_detail">
+        </label>
+        <br>
+        <label for="">優惠價
+            <span v-for="(id, book) in books">
+                <label for="">{{id+1}}</label>
+                <!-- 只要 id_discount 是 true 就會先自動勾起來 -->
+                <input type="checkbox" v-model="book.is_discount">
+            </span>
+        </label>
+        <br>
+        <label for="">小呈現：
+            <input type="radio" v-model="mode_size" value="small">
+        </label>
+        <label for="">大呈現：
+            <input type="radio" v-model="mode_size" value="big">
+        </label>
+        <br>
+        <!-- {{mode_detail?'detail':''}} 如果 mode_detail 成立? 的話，就要變成 detail 這個文字，否則: 就是空白的  -->
+        <div class="book {{mode_detail?'detail':''}} {{mode_size}}" v-for="book in books">
+            <img v-bind:src="book.img" alt="">
+            <div class="infos">
+                <h4>
+                    <!-- substring(從第幾個字, 抓取到第幾個字) -->
+                    <a v-bind:href="book.link_book" target="_blank">{{book.name.substring(0, 16)}}</a>
+                </h4>
+                <div class="author">作者：
+                    <a v-bind:href="book.link_author" target="_blank">{{book.author}}</a>
+                </div>
+                <!-- v-if 如果 mode_detail 成立，就顯示出來 -->
+                <div class="publisher" v-if="mode_detail">出版社：{{book.publish_house}}</div>
+                <!-- book.is_discount 如果 id_discount 成立就顯示 -->
+                <div class="price" v-if="book.is_discount">價格：
+                    <!-- parseInt() 取整數 -->
+                    <span>{{parseInt(book.price)}}</span> 元
+                </div>
+                <!-- !book.is_discount 如果 id_discount 不成立就顯示 -->
+                <div class="price" v-if="!book.is_discount">優惠價：
+                    <span>{{book.discount * 100}}</span> 折
+                    <span>{{parseInt(book.price * book.discount)}}</span> 元
+                </div>
+                <div class="date" v-if="mode_detail">出版日期：{{book.date}}</div>
+            </div>
+        </div>
+    </div>
+    <script src="vue_vif.js"></script>
 </body>
 
 </html>
