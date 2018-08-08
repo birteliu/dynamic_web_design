@@ -46,4 +46,6 @@ Learning 10-2: [mousemove2](https://birteliu.github.io/dynamic_web_design/try/tr
 
 Project 6: [Ocean](https://birteliu.github.io/dynamic_web_design/ocean/index.html)
 
-Learning 11: [vue.js](https://birteliu.github.io/dynamic_web_design/try/try11_vue/)
+Learning 11-1: [vue.js](https://birteliu.github.io/dynamic_web_design/try/try11_vue/)
+
+Learning 11-2: [vue.js/v-if](https://birteliu.github.io/dynamic_web_design/try/try11_vue/vue_vif/)
